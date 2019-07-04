@@ -30,3 +30,6 @@ code {
   display: table;
   clear: both;
 }
+.lineThrow {
+  text-decoration: line-through;
+}

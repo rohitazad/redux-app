@@ -9,6 +9,8 @@ const NotFoundComp = () => {
       <hr />
       https://react-bootstrap.github.io/getting-started/introduction/
       <hr />
+      https://www.valentinog.com/blog/redux/
+      <hr />
     </React.Fragment>
   );
 };

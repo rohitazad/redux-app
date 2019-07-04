@@ -1,7 +1,12 @@
 import React from "react";
+import ArticleAppComp from "./article/app";
 
 const AboutComp = () => {
-  return <React.Fragment>Helloi i m About page comp</React.Fragment>;
+  return (
+    <React.Fragment>
+      <ArticleAppComp />
+    </React.Fragment>
+  );
 };
 
 export default AboutComp;
