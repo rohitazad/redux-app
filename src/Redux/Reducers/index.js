@@ -1,7 +1,12 @@
-import { ADD_ARTICLE, FOUND_BAD_WORD } from "../../Constants/action-types";
+import {
+  ADD_ARTICLE,
+  FOUND_BAD_WORD,
+  DATA_LOADED
+} from "../../Constants/action-types";
 
 const initialState = {
-  articles: []
+  articles: [],
+  remoteArticles: []
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -16,6 +21,12 @@ const rootReducer = (state = initialState, action) => {
     //debugger;
     return Object.assign({}, state, {
       articles: state.articles.concat(action.payload)
+    });
+  }
+
+  if (action.type === DATA_LOADED) {
+    return Object.assign({}, state, {
+      remoteArticles: state.remoteArticles.concat(action.payload)
     });
   }
   return state;

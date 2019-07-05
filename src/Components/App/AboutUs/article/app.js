@@ -4,6 +4,7 @@ import FormArticle from "./articleForm";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import PostAsyComp from "./postAsy";
 
 const ArticleAppComp = () => {
   return (
@@ -17,6 +18,12 @@ const ArticleAppComp = () => {
           <Col>
             <h2>Articles</h2>
             <List />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h3>Asy Post Here</h3>
+            <PostAsyComp />
           </Col>
         </Row>
       </Container>
