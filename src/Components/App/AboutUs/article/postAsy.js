@@ -9,20 +9,21 @@ class PostAsyComp extends Component {
   }
   render() {
     console.log(this.props.articles);
-    return (
-      <Fragment>
-        {this.props.articles.map(article => {
-          return (
-            <ListGroup.Item key={article.id} className="todo-item-sec">
-              {article.title}
-            </ListGroup.Item>
-          );
-        })}
-      </Fragment>
-    );
+    const postData =
+      this.props.articles.length > 0
+        ? this.props.articles.map(article => {
+            return (
+              <ListGroup.Item key={article.id} className="todo-item-sec">
+                {article.title}
+              </ListGroup.Item>
+            );
+          })
+        : "<div>loading ...</div>";
+    return <Fragment>{postData}</Fragment>;
   }
 }
 function mapStateToProps(state) {
+  //debugger;
   return {
     articles: state.remoteArticles.slice(0, 10)
   };
